@@ -1,6 +1,4 @@
-const pokemons = [
-    { id: 1, nome: 'Charmandu', tipo: 'torcha', altura: '1,20', peso: '20kg', nivelDePoder: '25' }
-];
+const pokemons = [];
 
 const getPokemons = () => pokemons;
 const getPokemonById = (id) => pokemons.find(p => p.id === parseInt(id));

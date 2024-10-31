@@ -13,21 +13,41 @@
             </li>
         <% }); %>
     </ul>
-    <form action="/create" method="POST">
-        <label for="nome">Nome: </label>
+    <form action="/createPokemon" method="POST">
+        <label for="nome"></label>
         <input type="text" name="nome" placeholder="Nome">
         <br>
-        <label for="tipo">Tipo: </label>
+        <label for="tipo"></label>
         <input type="text" name="tipo" placeholder="Tipo">
         <br>
-        <label for="altura">Altura: </label>
+        <label for="altura"></label>
         <input type="text" name="altura" placeholder="Altura">
         <br>
-        <label for="peso">Peso: </label>
+        <label for="peso"></label>
         <input type="text" name="peso" placeholder="Peso">
         <br>
-        <label for="nivelDePoder">Nível de Poder: </label>
+        <label for="nivelDePoder"></label>
         <input type="number" name="nivelDePoder" placeholder="Nível de Poder">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>    
+
+    <ul>
+        <% treinadores.forEach(function(treinador) { %>
+            <li>
+                <a href="/treinador/<%= treinador.id %>"><%= treinador.nome %></a> - <%= treinador.idade %> - <%= treinador.altura %>
+            </li>
+        <% }); %>
+    </ul>
+    <form action="/createTreinador" method="POST">
+        <label for="nome"></label>
+        <input type="text" name="nome" placeholder="Nome">
+        <br>
+        <label for="idade"></label>
+        <input type="number" name="idade" placeholder="Idade">
+        <br>
+        <label for="altura"></label>
+        <input type="text" name="altura" placeholder="Altura">
         <br>
         <button type="submit">Enviar</button>
     </form>    
